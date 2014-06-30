@@ -78,3 +78,5 @@ Author URI: http://bradknowlton.com/
     );
     register_post_type( 'classified', $args );
     } 
+    
+    
