@@ -5,8 +5,14 @@ Plugin Name: DM Classifieds
 Plugin URI: http://www.designmissoula.com/
 Description: This is not just a plugin, it makes WordPress better.
 Author: Bradford Knowlton
-Version: 1.6
 Author URI: http://bradknowlton.com/
+Version: 1.7.3
+License:           GNU General Public License v2
+License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+Domain Path:       /languages
+Text Domain:       DM-classifieds
+GitHub Plugin URI: https://github.com/DesignMissoula/DM-classifieds
+GitHub Branch:     gcsaa-groups
 */
 
 add_action( 'init', 'register_taxonomy_classified_categories' );
@@ -74,7 +80,8 @@ function register_cpt_classified() {
 		'query_var' => true,
 		'can_export' => true,
 		'rewrite' => true,
-		'capability_type' => 'post'
+		'capability_type' => 'post',
+		'menu_icon' => 'dashicons-feedback'
 	);
 	register_post_type( 'classified', $args );
 }
